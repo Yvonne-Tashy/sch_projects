@@ -1,3 +1,5 @@
+import 'package:eventura/auth/signup.dart';
+import 'package:eventura/core/navigation/navigation.dart';
 import 'package:eventura/screens/welcome.dart';
 import 'package:flutter/material.dart';
 
@@ -7,13 +9,14 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-@override
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
       title: 'Eventura',
 
-      home: Welcome(),
+      routerConfig: appRouter,
+      
     );
   }
 }
-
